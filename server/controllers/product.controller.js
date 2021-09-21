@@ -14,7 +14,6 @@ module.exports.findAllProducts = (req, res)=>{
 
 //finds one Product
 module.exports.oneProduct = (req, res)=>{
-    console.log("Finding Product!");
     Product.findOne({_id:req.params.id})
         .then(oneProduct =>{
             res.json({results: oneProduct})

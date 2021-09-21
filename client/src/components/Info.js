@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import {useHistory} from "react-router-dom"
 
 const Info = () => {
-
+    const history= useHistory();
     let [information, setInformation] = useState({
         title:null,
         price:null,
@@ -23,6 +24,7 @@ const Info = () => {
         axios.post("http://localhost:8000/api/products", information)
             .then(res=>{
                 console.log("this", res)
+                history.push("/api/products")
             })
             .catch(err=>console.log("err", err))
     }

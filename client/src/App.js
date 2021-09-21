@@ -3,6 +3,7 @@ import './App.css';
 import AllProductsListed from './components/AllProductsListed';
 import Info from './components/Info';
 import Specific from './components/Specific';
+import Edit from './components/Edit';
 
 import {
   BrowserRouter,
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route exact path="/api/products/:idParam">
             <Specific></Specific>
+          </Route>
+          <Route exact path ="/api/products/:idParam/edit">
+            <Edit></Edit>
           </Route>
         </Switch>
   </div>
