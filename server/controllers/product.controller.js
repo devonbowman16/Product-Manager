@@ -1,11 +1,6 @@
 const Product = require ("../models/product.model");
 
 
-module.exports.peeps = (req,res) =>{
-    res.json ({message: "Hello peeps"});
-}
-
-
 //gets all jokes
 module.exports.findAllProducts = (req, res)=>{
     Product.find()
